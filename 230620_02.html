@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+  <table border="1" cellspacing="0" width=300 height=300 cellpadding="20" align="center" bordercolor="red" background="댕댕이오리.jpg"> <!-- 2행 3열 -->
+  	<tr bgcolor="pink" align="right" valign="top">
+		<td colspan="2">data01</td> <!-- 두 개의 열 병합? -->
+		<td>data03</td>
+	</tr>
+  	<tr>
+		<td>data04</td>
+		<td>data05</td>
+		<td>data06</td>
+	</tr>
+  </table>
+  <hr>
+  <table border="1" cellspacing="0" width=300 height=300 cellpadding="20" align="center" bordercolor="red" background="댕댕이오리.jpg"> <!-- 2행 3열 -->
+  	<tr bgcolor="pink" align="right" valign="top">
+		<td rowspan="2">data01</td> <!-- 두 개의 행(?)병합-->
+		<td>data02</td>
+		<td>data03</td>
+	</tr>
+  	<tr>
+		<td>data05</td>
+		<td>data06</td>
+	</tr>
+  </table>
+  <hr>
+  <br>
+    <h2 align="center">병합 테스트</h2>
+  <table border=1 cellspacing=0 align="center" width=300 height=300>
+	<tr align="center">
+		<td bgcolor="red" colspan=2>가</td>
+		<td bgcolor="yellow" rowspan=2>라</td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="blue" rowspan=2>나</td>
+		<td bgcolor="green">다</td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="orange" colspan=2>마</td>
+	</tr>
+  </table>
+ </body>
+</html>

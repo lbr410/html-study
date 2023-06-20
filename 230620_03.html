@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+	<h1>학원 수강료 표</h1>
+	<table border="1" cellspacing="0" width="300" summary="학원 수강료 표">
+		<caption>학원 수강료 표</caption>
+		<!-- summary와 <caption>을 같이 씀 -->
+		<thead> <!-- 제목 부분을 감싸줌 -->
+			<tr>
+				<th>강사</th>
+				<th>과목</th>
+				<th>강의실</th>
+				<th>수강료</th>
+			</tr>
+		<thead>
+		<tfoot> <!-- 여기에 작성해도 맨 밑에 보임..!? -->
+			<tr>
+				<td colspan="4">위 상기내용은 변경될 수 있습니다</td>
+			</tr>
+		</tfoot>
+		<tbody> <!-- 내용 부분들을 감싸줌-->
+			<tr>
+				<td rowspan="2">홍길동</td>
+				<td>Java</td>
+				<td rowspan="2">401호</td>
+				<td>800,000</td>
+			</tr>
+			<tr>
+				<td>JSP</td>
+				<td rowspan="2">950,000</td>
+			</tr>
+			<tr>
+				<td>둘리</td>
+				<td>Oracle</td>
+				<td>402호</td>
+			</tr>
+		<tbody>
+	</table>
+ </body>
+</html>
