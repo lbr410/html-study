@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+  <h1>사용자 정보 입력</h1>
+  <form name="memberInfo" action="https://google.co.kr" method="post">
+  <!-- 입력은 form으로 관리됨??. action은 누구에게 데이터를 줄 것인가.
+  post방식으로 데이터 전달 -->
+  <fieldset>
+	<legend>기본정보</legend>
+	  <label>이름 : <input type="text" name="username"></label><br>
+	  <!-- label은 텍스트박스가 아니라 '이름'부분을 클릭해도 텍스트박스에 커서가 생김 -->
+	  <label for="uid">ID : <input type="text" name="userid" size="35" maxlength="6" value="hong" id="uid"><br>
+	  <!-- 35글자만큼 입력할 수 있게 텍스트박스를 만들었지만 6글자까지만 입력 가능하게 함 -->
+	  비밀번호 : <input type="password" name="userpwd" size="15" maxlength="10"><br>
+  </fieldset>
+  <fieldset>
+  	<legend>선택정보</legend>
+	  성별 : <input type="radio" name="se" value="남자">남자
+			<input type="radio" name="se" value="여자" checked="checked">여자
+			<input type="radio" name="se" value="트랜스">트랜스<br>
+	  취미 : <input type="checkbox" name="cbs" value="공부">공부
+			<input type="checkbox" name="cbs" value="독서" checked>독서
+			<input type="checkbox" name="cbs" value="운동">운동
+			<input type="checkbox" name="cbs" value="게임">게임
+			<input type="checkbox" name="cbs" value="잠자기">잠자기<br>
+			<!-- checkbox는 다중 선택이 가능 -->
+	  직업 : <select name="job" size="4" multiple>
+			<!-- 4개 정도 한 번에 보여줌 / 다중선택 가능 -->
+				<option value="학생">학생</option>
+				<option value="회사원">회사원</option>
+				<option value="자영업" selected>자영업</option>
+				<option value="공무원">공무원</option>
+				<option value="군인">군인</option>
+				<option value="가정주부">가정주부</option>
+			</select><br>
+	  자기소개<br>
+	  <textarea name="mypr" cols="35" rows="5">Hello!</textarea><br>
+	  <!-- cols, rows는 요즘엔 잘 안쓰인다고 함! -->
+	  <!-- textarea는 value가 body contents 영역이라 태그 안에다가 value 값을 작성? -->
+	  본인사진 : <input type="file" name="myphoto"><br>
+	  <input type="submit" value="전달하기">
+	  <input type="reset" value="초기화하기">
+	  <input type="button" value="더미버튼"> <!-- 더미는 아무 기능없는 버튼 -->
+  </fieldset>
+  </form>
+ </body>
+</html>

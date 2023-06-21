@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+  <h3 align="center">회원가입은 무료!</h3>
+  <form name="signUp" action="https://google.co.kr" method="get">
+  <table bgcolor="#FFE5F2" align="center" border="1" cellspacing="0">
+    <tr>
+		<td><label for="userid">회원 ID</td>
+		<td><input type="text" size="15" name="id" id="userid"/> 영문/숫자 3-8; 한글 2-4자</label></td>
+	</tr>
+	<tr>
+		<td><label for="userpwd">비밀번호</td>
+		<td><input type="password" size="15" name="pwd" id="userpwd"/> 영문/숫자 조합으로 4-9자</label></td>
+	</tr>
+	<tr>
+		<td><label for="userpwd2">비밀번호 확인</td>
+		<td><input type="password" size="15" name="pwd2" id="userpwd2"/></label></td>
+	</tr>
+	<tr>
+		<td><label for="username">성 명</td>
+		<td><input type="text" size="15" name="name" id="username"/></label></td>
+	</tr>
+	<tr>
+		<td>성 별</td>
+		<td><input type="radio" name="gender" value="남" checked>남 
+		<input type="radio" name="gender" value="여">여</td>
+	</tr>
+	<tr>
+		<td>주민등록번호</td>
+		<td><input type="text" size="10"> - <input type="password" size="10">
+		예) 930410-2123456</td>
+	</tr>
+	<tr>
+		<td>생년월일</td>
+		<td><input type="text" size="3" name="year">년 
+		<input type="text" size="1">월 <input type="text" size="1">일  <input type="radio" checked>양력 <input type="radio">음력</td>
+	</tr>
+	<tr>
+		<td><label for="email">E-MAIL</td>
+		<td><input type="text" size="55" id="email"></label></td>
+	</tr>
+	<tr>
+		<td>우편번호</td>
+		<td><input type="text" size="2" name="zip1"> - <input type="text" size="2" name="zip2"></td>
+	</tr>
+	<tr>
+		<td><label for="address">주소</td>
+		<td><input type="text" size="55" name="addr" id="address"></label></td>
+	</tr>
+	<tr>
+		<td>전화번호</td>
+		<td><input type="text" size="2" name="tel1"> - 
+		<input type="text" size="2" name="tel2"> - 
+		<input type="text" size="2" name="tel3"></td>
+	</tr>
+	<tr>
+		<td>H.P번호</td>
+		<td><select name="hpNum1">
+				<option value="010" selected>010</option>
+				<option value="011">011</option>
+				<option value="016">016</option>
+				<option value="010">018</option>
+				<option value="010">019</option>
+			</select> -
+			<input type="text" size="2" name="hpNum2"> -
+			<input type="text" size="2" name="hpNum3"></td>
+	</tr>
+	<tr align="center">
+		<td colspan="2"><input type="submit" value="전송"> &nbsp;
+		<input type="reset" value="재입력">
+	</tr>
+  </table>
+  </form>
+ </body>
+</html>

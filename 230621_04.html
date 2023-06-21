@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+/* 임베디드 방식 */
+/* 태그 선택자 */
+b, i {
+	color: blue; /* 글자의 색상 */
+	font-family: '궁서'; /* 글꼴 */
+	font-size: 35px;
+}
+u {
+	color: green;
+	font-family: '바탕';
+	font-size: 15px;
+}
+
+/* 클래스 선택자 */
+.t1 {
+	font-family: '궁서';
+	color: green;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: pink;	
+}
+
+.t2 {
+	font-family: '바탕';
+	color: blue;
+	font-size: 15px;
+}
+
+.t3 {
+	color: red;
+}
+
+.t4 {
+	font-family: '궁서';
+}
+  </style>
+ </head>
+ <body>
+  <b>스타일 적용 텍스트</b><br>
+  <i>스타일 적용 텍스트</i><br>
+  <u>스타일 적용 텍스트</u>
+  <hr>
+  <div class="t1">스타일 적용 텍스트</div>
+  <div class="t2">스타일 적용 텍스트</div>
+  <span class="t1">스타일 적용 텍스트</span>
+  <span class="t2">스타일 적용 텍스트</span>
+  <div class="t3 t4">스타일 적용 텍스트</div>
+  <hr>
+  <table border="1">
+	<tr>
+		<th class="t1">이름</th>
+		<td class="t2">홍길동</td>
+	</tr>
+	<tr>
+		<th class="t1">주소</th>
+		<td class="t2">서울시 서대문구 신촌로</td>
+	</tr>
+	<tr>
+		<th class="t1">전화번호</th>
+		<td class="t2">02-1234-5678</td>
+	</tr>
+  </table>
+ </body>
+</html>
