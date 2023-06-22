@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+function hi(name) {
+	document.write('<h3>'+name+'님 안녕하세요.</h3>');
+	document.write('<h3>반갑습니다 :)</h3>');
+}
+
+/* public int getSum(int i, int j) { return i+j; } */
+function getSum(i, j) {
+	return i+j;
+}
+
+hi('뭉이');
+hi('조이');
+hi(); /* undefined/ 매개변수를 찾는 게 아니라 함수이름으로 호출됨 */
+
+var sum = getSum(3, 5);
+document.write('<h3>3+5='+sum+'</h3>');
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

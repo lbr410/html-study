@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+h1 {
+	margin-top: 15px;
+	font-size: 50px;
+	text-align: center;
+	font-weight: bold;
+}
+
+td {
+	padding-left: 10px;
+}
+
+input {
+	color: #FF33C1;
+}
+
+table {
+	width: 500px;
+	height: 150px;
+	border-top: 5px double pink;
+	border-bottom: 5px double pink;
+	border-spacing: 0;
+}
+
+.dotted_bottom {
+	border-bottom: 2px dotted pink;
+}
+
+.dotted_right {
+	border-right: 2px dotted pink;
+}
+
+.td_bg_bold {
+	background-color: #FFEEF9;
+	font-weight: bold;
+}
+  </style>
+ </head>
+ <body>
+  <h1>회 원 가 입</h1>
+  <table align="center">
+  	<tr>
+		<td class="dotted_bottom dotted_right td_bg_bold"><label for="userid">*아이디</td>
+		<td class="dotted_bottom"><input type="text" name="id" id="userid"/></label></td>
+	</tr>
+	<tr>
+		<td class="dotted_bottom dotted_right td_bg_bold"><label for="userpwd">*비밀번호</td>
+		<td class="dotted_bottom"><input type="password" name="pwd" id="userpwd"/></label></td>
+	</tr>
+	<tr>
+		<td class="dotted_right td_bg_bold"><label for="usertel">*연락처</td>
+		<td><input type="text" name="tel" id="usertel"/></td>
+	</tr>
+  </table>
+ </body>
+</html>

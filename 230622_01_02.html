@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+h1 {
+	text-align: center;
+}
+
+table {
+	margin: 0px auto;
+	border-top: 3px double darkblue;
+	border-bottom: 3px double darkblue;
+	width: 350px;
+	border-spacing: 0;
+}
+
+.cell {
+	background: skyblue;
+	border-bottom: 2px dotted darkblue;
+	border-right: 2px dotted darkblue;
+	font-size: 12px;
+}
+
+.cell2 {
+	background: skyblue;
+	font-size: 12px;
+	border-right: 2px dotted darkblue;
+}
+
+.cell3 {
+	font-size: 12px;
+	border-bottom: 2px dotted darkblue;
+}
+
+.cell4 {
+	font-size: 12px;
+}
+
+.box {
+	border: 1px solid gray;
+	font-size: 12px;
+	color: darkblue;
+	background-color: skyblue;
+}
+  </style>
+ </head>
+ <body>
+  <h1>회 원 가 입</h1>
+  <table>
+	<tr>
+		<th class="cell">*아이디</th>
+		<td class="cell3"><input type="text" name="id" class="box"></td>
+	</tr>
+	<tr>
+		<th class="cell">*비밀번호</th>
+		<td class="cell3"><input type="password" name="pwd" class="box"></td>
+	</tr>
+	<tr>
+		<th class="cell2">*연락처</th>
+		<td class="cell4"><input type="text" name="tel" class="box"></td>
+	</tr>
+  </table>
+ </body>
+</html>
