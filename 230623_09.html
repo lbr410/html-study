@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function show() {
+            // 1. 사용자가 선택한 등급 취득하기
+            // var level = document.fm.level.value;
+            // window.alert(level); // value값이 나옴
+
+            // name이 같으면 배열처럼 인식함
+            for(var i=0; i<document.fm.level.length; i++) {
+                if(document.fm.level[i].checked==true) {
+                    var level = document.fm.level.value;
+                }
+            }
+
+            // window.alert(level);
+
+            // 넘어온 값은 문자열 형태임
+            switch(level) { // 자바스크립트에서는 문자열이 됨?
+                case '1': point=5000; break;
+                case '2': point=3000; break;
+                case '3': point=1000; break;
+            }
+
+            window.alert('선택한 등급의 포인트는 '+point+'점입니다.');
+        }
+    </script>
+</head>
+<body>
+    <h1>등급에 따른 포인트 확인하기</h1>
+    <form name="fm">
+        <label>등급 : </label>
+        <input type="radio" name="level" value="1">정회원
+        <input type="radio" name="level" value="2">준회원
+        <input type="radio" name="level" value="3">일반회원
+        <!-- name을 똑같이 줘서 그룹화? -->
+        <br><br>
+        <input type="button" value="포인트 확인" onclick="show();">
+    </form>
+</body>
+</html>
