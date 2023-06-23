@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {
+            width: 300px;
+            height: 250px;
+            margin: 0px auto;
+            background-color: lightgray;
+        }
+
+        td {
+            padding-left: 20px;
+        }
+
+        .resultTitle {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .subject {
+            font-weight: bold;
+            color: rgb(56, 56, 56);
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function result() {
+            var kor = document.fm.kor.value;
+            var eng = document.fm.eng.value;
+            var math = document.fm.math.value;
+
+            kor = parseInt(kor);
+            eng = parseInt(eng);
+            math = parseInt(math);
+            var sum = kor+eng+math;
+            var avg = sum/3;
+            
+            let grade = 'F';
+            let result = '합격';
+            if(kor>=40 && eng>=40 && math>=40) {
+                if(avg>=90) {
+                    grade = 'A';
+                } else if(avg>=80) {
+                    grade = 'B'
+                } else if(avg>=70) {
+                    grade = 'C';
+                } else if(avg>=60) {
+                    grade = 'D';
+                } else {
+                    result = '불합격';
+                }
+            } else {
+                grade = '-';
+                result = '과락';
+            }
+            
+            window.alert("---------------------\n       시험결과       \n---------------------\n총점 : "+sum+"점\n평균 : "+avg.toFixed(2)+"점\n등급 : "+grade+"급\n결과 : "+result);
+        }
+    </script>
+</head>
+<body>
+    <h1 class="center">시험 결과 조회</h1>
+    <form name="fm">
+        <table>
+            <tr>
+                <td colspan="2" class="center resultTitle">점수 입력</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="subject">국어</td>
+                <td><input type="text" name="kor"></td>
+            </tr>
+            <tr>
+                <td class="subject">영어</td>
+                <td><input type="text" name="eng"></td>
+            </tr>
+            <tr>
+                <td class="subject">수학</td>
+                <td><input type="text" name="math"></td>
+            </tr>
+            <tr>
+                <td class="center" colspan="2">
+                    <input type="button" value="시험결과확인" onclick="result();">
+                    <input type="reset" value="다시작성">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function show() {
+            // 1. 사용자 값 획득하기
+            var kor = document.fm.kor.value;
+            kor = parseInt(kor);
+            var eng = parseInt(document.fm.eng.value);
+            let math = parseInt(document.fm.math.value);
+
+            // 2. 총점, 평균, 등급
+            var sum = kor+eng+math;
+            var avg = sum/3;
+
+            var level = 'F';
+            switch(parseInt(avg/10)) { // double로 정의해버림. parseInt()로 정수화 시킴
+                case 10: case 9: level = 'A'; break;
+                case 8: level = 'B'; break;
+                case 7: level = 'C'; break;
+                case 6: level = 'D'; break;
+                default: level = 'F';
+            }
+
+            if(kor<40 || eng<40 || math<40 || avg<60) {
+                result = '불합격';
+            } else {
+                result = '합격'; // var를 이용해서 선언한 것과 같음
+            }
+
+            window.alert('[시험결과]\n총점 : '+sum+'점\n평균 : '
+                            +avg.toFixed(2)+'점\n등급 : '+level+'급\n결과 : '+result);
+            // avg를 객체로 바라본다면 기능(메서드)를 가지고 있을거임!
+            // 모든 자료형을 객체적인 관점으로 바라봄!
+        }
+    </script>
+</head>
+<body>
+    <h1>시험 결과 조회</h1>
+    <form name="fm">
+        <table>
+            <tr>
+                <th colspan="2">시험 결과</th>
+            </tr>
+            <tr>
+                <th>국어</th>
+                <td><input type="text" name="kor"></td>
+            </tr>
+            <tr>
+                <th>영어</th>
+                <td><input type="text" name="eng"></td>
+            </tr>
+            <tr>
+                <th>수학</th>
+                <td><input type="text" name="math"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="시험결과확인" onclick="show();">
+                    <input type="reset" value="다시작성">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

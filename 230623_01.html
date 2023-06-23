@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function show1() {
+            window.alert('기본 경고창입니다.'); // window는 DOM obj
+        }
+
+        function show2() {
+            var result = window.confirm('진짜 탈퇴하시겠습니까?'); // 취소 버튼이 있는 경고창
+            // 확인을 누르면 true, 취소를 누르면 false를 반환
+
+            if (result) { // true일 때
+                window.alert('탈퇴 완료! 당분간 가입 불가!');
+            } else { // false일 때
+                window.alert('잘 생각하셨습니다.')
+            }
+
+            // window.alert(result); // true
+        }
+
+        function show3() {
+            var result = window.prompt('이름을 입력하세요.', '여기에 작성'); // 입력을 받을 수 있는 경고창
+            window.alert(result);
+            // 취소 버튼을 누르면 null이라는 값을 반환
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="경고창1" onclick="show1();">
+    <input type="button" value="경고창2" onclick="show2();">
+    <input type="button" value="경고창3" onclick="show3();">
+</body>
+</html>

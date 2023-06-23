@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script> // script 영역은 head 안에 넣는 것을 권고
+        document.write('<select name="year">');
+        for(var i=1960; i<=2023; i++) {
+            document.write('<option value="'+i+'">'+i+'</option>');
+        }
+        document.write('</select>년');
+    </script>
+</head>
+<body>
+    <script>
+        document.write('<select name="month">');
+        for(var i=1; i<=12; i++) {
+            document.write('<option value="'+i+'">'+i+'</option>');
+        }
+        document.write('</select>월')
+    </script>
+    <select name="date">
+        <script>
+            for(var i=1; i<=31; i++) {
+                document.write('<option value="'+i+'">'+i+'</option>')
+            }
+        </script>
+    </select>일
+</body>
+</html>

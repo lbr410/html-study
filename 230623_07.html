@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {
+            margin: 0px auto;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.write('<table width="400" height="400">');
+        for(var i=1; i<=16; i+=4) {
+            document.write('<tr>');
+            document.write('<td>');
+            document.write('<img src="./img/'+i+'.jpg" width="80" height="80" alt="아이유"><br>');
+            document.write(i)
+            document.write('</td>');
+            document.write('<td>');
+            document.write('<img src="./img/'+(i+1)+'.jpg" width="80" height="80" alt="아이유"><br>');
+            document.write(i+1)
+            document.write('</td>');
+            document.write('<td>');
+            document.write('<img src="./img/'+(i+2)+'.jpg" width="80" height="80" alt="아이유"><br>');
+            document.write(i+2)
+            document.write('</td>');
+            document.write('<td>');
+            document.write('<img src="./img/'+(i+3)+'.jpg" width="80" height="80" alt="아이유"><br>');
+            document.write(i+3)
+            document.write('</td>');
+            document.write('</tr>');   
+        }
+        document.write('</table>');
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function show() {
+            /* 사용자가 입력한 값을 수집 */
+            var mon = document.fm.month.value; // document는 body?
+            mon = parseInt(mon); // 자료형이 값을 넣을 때 선정되므로 다시 집어넣음?
+            // 화면으로 나온 모든 데이터는 문자열임! 그래서 파싱을 해줘야함
+
+            /* 입력 달에 해당하는 일수 판단 */
+            let day = 0;
+            switch(mon) {
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12: 
+                day = 31; break;
+                case 2: day = 28; break;
+                case 4: case 6: case 9: case 11: day = 30; break;
+                default: day = '잘못된 달을 입력하였습니다.';
+            } // var로 변수를 만들면 함수를 기준으로 지역변수가 됨?(함수에 종속)
+
+            window.alert('해당 달의 일수 : '+day);
+        }
+    </script>
+</head>
+<body>
+    <h1>해당 월의 일수 구하기 프로그램 v1.0</h1>
+    <form name="fm"> <!-- 입력 태그는 form에 의해 관리되어야 함! -->
+        <label>월 입력 : 
+        <input type="text" name="month" /></label>
+        <input type="button" value="일수확인" onclick="show();" />
+    </form>
+</body>
+</html>
