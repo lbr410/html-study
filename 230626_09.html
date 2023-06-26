@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var str = '지각, 결석을 하지 맙시다....'
+        var count = 0;
+        var str2 = '';
+        function displayNotice() {
+            str2 += str.substring(count, count+1);
+            document.fm.notice.value = str2;
+            if(count>=str.length) {
+                str2 = '';
+                count = 0;
+            } else {
+                count++;
+            }
+            window.setTimeout('displayNotice()', 200);
+        }
+    </script>
+</head>
+<body onload="displayNotice();">
+    <form name="fm">
+        <label>공지사항 : </label>
+        <input type="text" name="notice">
+    </form>
+</body>
+</html>

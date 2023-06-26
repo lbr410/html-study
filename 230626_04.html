@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        /*
+        Array 클래스(자바스크립트 배열)
+
+        형식
+        var 변수이름 = new Array(크기) => int arr[] = new int[크기];
+
+        사용법
+        배열변수[인덱스] = 값
+        배열변수.length
+
+        사실은 자바스크립트의 배열은 자바의 콜렉션과 비슷함
+        */
+       
+        var colors = new Array(7); // String colors[] = new String[7];
+        colors[0] = 'red';
+        colors[1] = 'blue';
+        colors[2] = 'green';
+        // colors[2] = 10; // 넣어도 에러가 나지 않음!
+        colors[3] = 'yellow';
+        colors[4] = 'pink';
+        colors[5] = 'orange';
+        colors[6] = 'gray';
+        // colors[7] = 'violet'; // error 안남. 추가가 되었음! 콜렉션과 비슷. 7이라는 크기로 만들었어도 배열이 가변적이기 때문에 에러가 안남
+        
+        for(var i=0; i<colors.length; i++) {
+            document.write('<h3 style="color:'+colors[i]+'">안녕하세요. 오늘은 월요일입니다!</h3>');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

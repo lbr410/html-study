@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        /*
+        Date 클래스
+        객체 생성 var 변수이름 = new Date();
+
+        주요 메서드
+        1. 년도 : getFullYear();
+        2. 월 : getMonth();
+        3. 일 : getDate();
+        4. 요일 : getDay() 0(일)~6(토)
+        5. 시간 : getHours();
+        6. 분 : getMinutes();
+        7. 초 : getSeconds();
+        */
+
+        var now = new Date();
+        var y = now.getFullYear();
+        var m = now.getMonth()+1; // 월에 +1을 해줘야 현재 월을 알 수 있음
+        var d = now.getDate();
+        var w = now.getDay(); // 월요일 기준 '1요일'
+        switch(w) {
+            case 0: w = '일'; break;
+            case 1: w = '월'; break;
+            case 2: w = '화'; break;
+            case 3: w = '수'; break;
+            case 4: w = '목'; break;
+            case 5: w = '금'; break;
+            case 6: w = '토';
+        }
+
+        document.write('<h1>'+y+'년 '+m+'월 '+d+'일 '+w+'요일</h1>')
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

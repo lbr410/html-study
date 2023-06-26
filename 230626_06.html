@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function msgRandom() {
+            var msg = new Array(5);
+            msg[0] = '지각을 하지맙시다.';
+            msg[1] = '결석을 하지맙시다!!!';
+            msg[2] = '복습을 잘하자!';
+            msg[3] = '건강관리 유의합시다.';
+            msg[4] = '아 배불러 죽겠다';
+
+            var num = Math.floor(Math.random()*5);
+
+            // getElementbyId();
+            // -> document.all.id;
+            document.all.notice.innerHTML = msg[num]; // 화면이 가지고있는 모든 구성요소 중 id(notice)를 찾겠다
+            // innerHTML & innerText
+            window.setTimeout('msgRandom()', 2000); // 따옴표 빼면 바로 실행되버려서 자가함수호출이 되어버림
+            // setTimeout는 내가 실행하고 있는 함수가 끝나고 실행하기 때문에 쌓여가는 방식이 아님
+            // 재귀함수(자가함수) 흉내내고 싶을 때 setTimeout을 사용해줌
+        }
+    </script>
+</head>
+<body onload="msgRandom();"> <!-- 페이지를 읽을 때 호출-->
+    <div id="notice" style="border:3px solid blue;width:450px;height:50px;font-size:25px;">    
+    </div>
+</body>
+</html>

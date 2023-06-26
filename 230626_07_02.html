@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function timeDisplay() {
+            var now = new Date();
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+
+            var str = h+'시 '+m+'분 '+s+'초';
+            document.fm.timer.value = str;
+            
+            window.setTimeout('timeDisplay()', 1000);
+        }
+    </script>
+</head>
+<body onload="timeDisplay();">
+    <form name="fm">
+        <label>현재 시간 : </label>
+        <input type="text" name="timer">
+    </form>
+</body>
+</html>

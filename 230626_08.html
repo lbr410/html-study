@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var msg = '지각, 결석을 하지 맙시다.....';
+        var len = msg.length;
+        function flowingNotice() {
+            document.fm.notice.value = msg;
+            msg = msg.substring(1, len)+msg.charAt(0);
+
+            window.setTimeout('flowingNotice()', 300);
+        }
+    </script>
+</head>
+<body onload="flowingNotice();">
+    <form name="fm">
+        <label>공지사항 : </label>
+        <input type="text" name="notice" style="border:2px solid gray">
+    </form>
+</body>
+</html>

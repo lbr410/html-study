@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function msgRandom() {
+            var msg = new Array(5);
+            msg[0] = '지각을 하지맙시다.';
+            msg[1] = '결석을 하지맙시다!!!';
+            msg[2] = '복습을 잘하자!';
+            msg[3] = '건강관리 유의합시다.';
+            msg[4] = '아 배불러 죽겠다';
+
+            /*
+            Math 클래스
+
+            1. random() ex) Math.random()*범위+시작수
+	        2. floor() : 현재 실수보다 가장 가까운 작은 정수를 반환
+	            floor(4.5); -> 4
+	        3. ceil() : 현재 실수보다 가장 가까운 큰 정수를 반환
+                ceil(4.5); -> 5
+            */
+
+            var num = Math.floor(Math.random()*5); // 0~4
+            document.write(msg[num]);
+            // msgRandom(); // 나를 다시 호출하는 함수 : 자가함수. 실제론 나를 호출하는 건 아님
+            // 스크립트언어는 자가함수를 호출할 수 없다!?
+        }
+    </script>
+</head>
+<body>
+    <div style="border:3px solid blue;width:450px;height:50px;font-size:25px;">
+        <script>
+            msgRandom();
+        </script>
+    </div>
+</body>
+</html>
