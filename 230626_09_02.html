@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var msg = '지각, 결석을 하지 맙시다....';
+        var len = msg.length;
+        var endidx = 0;
+        
+        function typingNotice() {
+            endidx++;
+            document.fm.notice.value = msg.substring(0, endidx);
+
+            if(endidx==len) {
+                endidx = 0;
+            }
+
+            window.setTimeout('typingNotice()', 200);
+        }
+    </script>
+</head>
+<body onload="typingNotice();">
+    <form name="fm">
+        <label>공지사항 : </label>
+        <input type="text" name="notice" style="border:2px solid gray">
+    </form>
+</body>
+</html>
