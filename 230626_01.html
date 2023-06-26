@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function allSelect() {
+            for(var i=0; i<document.fm.cbs.length; i++) { // 일반 태그는 이렇게 접근 불가. 폼태그(입력태그)에 한해서 이렇게 접근 가능!
+                document.fm.cbs[i].checked = true;
+            }
+        }
+
+        function allUnSelect() {
+            for(var i=0; i<document.fm.cbs.length; i++) {
+                document.fm.cbs[i].checked = false;
+            }
+        }
+
+        function show() {
+            var str = '';
+            for(var i=0; i<document.fm.cbs.length; i++) {
+                if(document.fm.cbs[i].checked==true) {
+                    // var str += document.fm.cbs[i].value; // error. 연산지 먼저 진행되는데 뒤에 데이터는 어떤 자료형인지 알 수 없으므로 에러
+                    str += document.fm.cbs[i].value+' ';
+                }
+            }
+
+            if(str=='') {
+                window.alert('당신은 취미를 선택하지 않았습니다.');
+            } else {
+                window.alert('당신이 선택한 취미는\n'+str+'\n입니다.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>취미 선택 프로그램</h1>
+    <form name="fm">
+        <label>취미 : </label>
+        <input type="checkbox" name="cbs" value="공부">공부
+        <input type="checkbox" name="cbs" value="독서">독서
+        <input type="checkbox" name="cbs" value="운동">운동
+        <input type="checkbox" name="cbs" value="게임">게임
+        <input type="checkbox" name="cbs" value="잠자기">잠자기
+        <br><br>
+        <input type="button" value="모두 선택" onclick="allSelect();">
+        <input type="button" value="모두 해제" onclick="allUnSelect();">
+        <input type="button" value="선택 확인" onclick="show();">
+    </form>
+</body>
+</html>
