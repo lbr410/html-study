@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function show(mp) {
+            // mp가 document.fm.myPhoto임!
+            // var filename = document.fm.myPhoto.value; // 파일 경로와 파일 이름이 나옴
+            var filename = mp.value;
+            var len = filename.length;
+            var filetype = filename.substring(len-3, len);
+
+            if(filetype!='jpg') {
+                window.alert('jpg 확장자의 이미지만 등록 가능!');
+                // document.fm.myPhoto.value = '';
+                mp.value = '';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>사용자 정보 입력</h1>
+    <form name="fm">
+        <label>이름 : </label><input type="text" name="name"><br>
+        <label>나이 : </label><input type="text" name="age"><br>
+        <label>본인사진 : </label>
+        <!-- <input type="file" name="myPhoto" onchange="show();"><br> -->
+        <input type="file" name="myPhoto" onchange="show(this);"><br>
+        <!-- onchange : 본인이 값이 바뀔 때 발생하는 이벤트 -->
+        <input type="button" value="완료">
+    </form>
+</body>
+</html>

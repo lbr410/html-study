@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function openPopup() {
+            /*
+            window.open('popup경로url', '식별자', '옵션');
+
+            옵션
+            1. width/height
+            2. top/left
+            3. menubar
+            4. toolbar
+            5. location
+            6. status
+            ...
+            */
+            window.open('popup.html', 'popup', 'width=320, height=280, top=100, left=200');
+            // 식별자는 페이지를 열었을 때 팝업창이 계속 뜨지 않게 하는 것?
+        }
+    </script>
+</head>
+<body onload="openPopup();">
+    <h1>해당 페이지는 메인 페이지입니다.</h1>
+</body>
+</html>

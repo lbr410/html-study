@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function show() {
+            let fulladdr = document.fm.address.value;
+            let zip = fulladdr.substring(1, 6);
+            let etc = fulladdr.substring(8); // 끝나는 위치 지정 안하면 끝까지 뜯어냄
+            
+            // opener - 나를 열였던 오프너. 본 페이지?
+            opener.document.join.zip.value = zip; // 본페이지 폼(join)의 입력태그(zip)의 value값
+            opener.document.join.addr1.value = etc;
+            // 위 코드는 인터넷 익스플로러에서만 또는 서버를 열어야만 실행이 됨
+            // opener 객체의 식별자를 크롬에서는 인지 못함?
+
+
+            window.self.close();
+        }
+    </script>
+</head>
+<body>
+    <form name="fm">
+        <fieldset>
+            <legend>우편번호 검색</legend>
+            <label>주소 : </label>
+            <input type="text" name="address" size="45">
+            <input type="button" value="확인" onclick="show();">
+        </fieldset>
+    </form>
+</body>
+</html>
